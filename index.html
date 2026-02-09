@@ -3,56 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Best Friend</title>
+    <title>For My Favorite Person 💖</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #ffe6ea; font-family: 'Fredoka', sans-serif; color: #d6336c; margin: 0; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        h1 { font-size: 2.5rem; text-shadow: 2px 2px 0px #fff; }
-        .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin: 30px 0; }
-        .polaroid { background: white; padding: 10px 10px 20px 10px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: rotate(-2deg); }
-        .polaroid img { width: 100%; height: 150px; object-fit: cover; border-radius: 2px; }
+        body {
+            background-color: #ffe6ea;
+            font-family: 'Fredoka', sans-serif;
+            color: #d6336c;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 { font-size: 2.5rem; margin-top: 50px; text-shadow: 2px 2px 5px #fff; }
+        .sub-text { font-size: 1.1rem; margin-bottom: 50px; opacity: 0.9; line-height: 1.4; }
+
+        /* Polaroid Image Styling */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 35px 12px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(214, 51, 108, 0.2);
+            margin: 20px auto;
+            width: 85%;
+            transform: rotate(-1deg);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+
         .polaroid:nth-child(even) { transform: rotate(2deg); }
-        .message-box { background: white; padding: 20px; border-radius: 20px; border: 2px dashed #ff8fa3; margin: 30px 0; }
-        .heart { position: fixed; color: #ffb3c1; font-size: 20px; z-index: -1; animation: move 5s linear infinite; }
-        @keyframes move { 0% { transform: translateY(100vh); opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
+
+        /* Kiss Separators */
+        .kiss-divider {
+            font-size: 2.8rem;
+            margin: 50px 0;
+            display: block;
+            filter: drop-shadow(0 0 8px #ff8fa3);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Long Message Box */
+        .message-box {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 40px;
+            border: 3px dashed #ff8fa3;
+            margin: 60px 10px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Animated Heart & Bubbles */
+        .heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            animation: floatUp 4.5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(110vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        footer { padding: 60px 0; font-size: 1.5rem; letter-spacing: 3px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Happy Valentine's Week! 🎀</h1>
-        <div class="photo-grid">
-            <div class="polaroid"><img src="https://i.postimg.cc/Mp8G3Lb8/IMG-20250815-WA0008.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/MKBTDwBt/IMG-20251118-WA0007.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/WpCzgzdg/IMG-20251210-WA0002.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/MKBTDwBd/IMG-20260101-141833021.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/W1P4Yy6d/IMG-20260101-160646184-HDR.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/jqm2P2Dy/IMG-20260101-160653328.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/WbZ3nVrV/IMG-20260101-160654844.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/rwLpZHCM/IMG-20260101-160832572-HDR.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/2jMyhy19/IMG-20260101-160955815-HDR.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/8Pv5HGWN/IMG-20260101-161107021-HDR.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/XNmqdqrG/IMG-20260101-162607369-HDR.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/qBSqyqNn/IMG-20260124-WA0017.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/QdrMYzkN/IMG-20260124-WA0018.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/KcwjBj1q/IMG-20260125-WA0002.jpg"></div>
-            <div class="polaroid"><img src="https://i.postimg.cc/QNwC1CFn/IMG-20260125-WA0003.jpg"></div>
-        </div>
-        <div class="message-box">
-            <h2>Dear Bestie,</h2>
-            <p>You're the best person I know. Happy Valentine's Week! ✨</p>
-        </div>
+
+<div class="container">
+    <h1>Happy Valentine's Week! 🎀✨</h1>
+    <p class="sub-text">To the best person I know... <br>Check out our memories below! 👇💖</p>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/XvsB25j5/IMG-20250815-WA0008.jpg"></div>
+    <span class="kiss-divider">💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/Gpdvgrk1/IMG-20251118-WA0007.jpg"></div>
+    <span class="kiss-divider">💋💕💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/tgpFvyhj/IMG-20260101-160635519.jpg"></div>
+    <span class="kiss-divider">😘</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/qq3tMZ84/IMG-20260101-160646184-HDR.jpg"></div>
+    <span class="kiss-divider">💋✨💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/P5GWZ1xR/IMG-20260101-160653328.jpg"></div>
+    <span class="kiss-divider">💗💋💗</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/k4Z6Cdtr/IMG-20260101-160832572-HDR.jpg"></div>
+    <span class="kiss-divider">💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/x1KKPqNv/IMG-20260101-160955815-HDR.jpg"></div>
+    <span class="kiss-divider">🍭💋🍭</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/C1tB0VfS/IMG-20260101-161107021-HDR.jpg"></div>
+    <span class="kiss-divider">💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/bNS0smz9/IMG-20260101-162607369-HDR.jpg"></div>
+    <span class="kiss-divider">😘💋😘</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/wjKXJDv4/IMG-20260124-WA0017.jpg"></div>
+    <span class="kiss-divider">💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/ydWg2NxP/IMG-20260124-WA0018.jpg"></div>
+    <span class="kiss-divider">🌸💋🌸</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/k5sKkZyH/IMG-20260124-WA0019.jpg"></div>
+    <span class="kiss-divider">💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/FHjjx1kZ/IMG-20260125-WA0002.jpg"></div>
+    <span class="kiss-divider">💋💓💋</span>
+
+    <div class="polaroid"><img src="https://i.postimg.cc/N0BRCY1q/IMG-20260125-WA0003.jpg"></div>
+
+    <div class="message-box">
+        <h2>To My Best Friend... 💌💖</h2>
+        <p>
+            I wanted to make something unique just for you. ✨ These photos remind me of all the great times we've shared. You've always been there for me, and I hope you know how much I appreciate you. 🧸
+            <br><br>
+            You deserve a week full of happiness and love. Thank you for being such an amazing friend. You make life a lot more fun! 🌈💖
+            <br><br>
+            Keep smiling, stay awesome, and Happy Valentine's Week! 🌹🍫
+            <br><br>
+            <strong>Forever grateful for you! 💋🍭🎀</strong>
+        </p>
     </div>
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤';
-            heart.style.left = Math.random() * 100 + 'vw';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 400);
-    </script>
+
+    <footer>
+        ❤️🍓🍒🍭🎀🍬🌈❤️
+    </footer>
+</div>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        const types = ['❤', '💖', '💕', '💗', '🫧', '💋', '😘'];
+        heart.innerHTML = types[Math.floor(Math.random() * types.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+        heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4500);
+    }
+    setInterval(createHeart, 250);
+</script>
+
 </body>
 </html>
